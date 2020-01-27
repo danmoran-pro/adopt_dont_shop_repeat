@@ -7,7 +7,7 @@ RSpec.describe 'As a visitor' do
             shelter_2 = Shelter.create!(name: "Smart Friends League", address: "456 Sample St", city: "Denver", state: "CO", zip: 80220)
 
             visit "/shelters"
-            expect(route).to eq("/shelters")
+            expect(current_path).to eq("/shelters")
 
             expect(page).to have_content(shelter_1.name)
             expect(page).to have_content(shelter_2.name)
