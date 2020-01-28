@@ -26,10 +26,6 @@ RSpec.describe 'As a visitor' do
             expect(current_path).to eq(shelters_path)
             
             expect(page).to have_content(name)
-            # expect(page).to have_content(address)
-            # expect(page).to have_content(city)
-            # expect(page).to have_content(state)
-            # expect(page).to have_content(zip)
         end
     end
 end

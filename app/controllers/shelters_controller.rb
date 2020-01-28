@@ -17,6 +17,20 @@ class SheltersController < ApplicationController
     redirect_to shelters_path
   end 
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
+  def update
+    @shelter = Shelter.find(params[:id])
+    @shelter.update_attributes(shelter_params)
+    @shelter.save
+
+    redirect_to shelter_path
+  end
+  
+  
+
   private
     def shelter_params
       params.require(:shelter).permit(:name, :address, :city, :state, :zip)
