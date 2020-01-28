@@ -5,7 +5,6 @@ RSpec.describe 'As a visitor' do
         it "Then I see the shelter with that id's attributes" do  
             shelter_1 = Shelter.create!(name: "Dumb Friends League", address: "123 Sample St", city: "Denver", state: "CO", zip: 80220)
 
-            # visit "/shelters/#{shelter_1.id}"
             visit shelter_path(shelter_1)
 
             expect(page).to have_content(shelter_1.name)
