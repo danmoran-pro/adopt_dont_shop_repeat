@@ -21,10 +21,10 @@ RSpec.describe 'As a visitor' do
             fill_in "City",	with: city
             fill_in "State", with: state
             fill_in "Zip", with: zip
-
             click_on "Create Shelter"
-
+            
             expect(current_path).to eq(shelters_path)
+            
             expect(page).to have_content(name)
             # expect(page).to have_content(address)
             # expect(page).to have_content(city)
