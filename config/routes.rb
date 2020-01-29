@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :shelters
+  resources :shelters do 
+    resources :pets, only: [:index]
+  end 
+
   resources :pets
   
 end

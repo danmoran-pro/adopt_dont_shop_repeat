@@ -13,11 +13,11 @@ RSpec.describe "As a visitor" do
     expect(current_path).to eq("/pets")
 
     expect(page).to have_content(sparky.name)
-    expect(page).to have_content(sparky.image)
+    expect(page).to have_css("img[src *= 'west_highland_white_terrier_24.jpg']")
     expect(page).to have_content(sparky.approximate_age)
     expect(page).to have_content(sparky.sex)
+    expect(page).to have_content(sparky.shelter.name)
     expect(page).to have_content(peppo.name)
-
     end
   end
 end

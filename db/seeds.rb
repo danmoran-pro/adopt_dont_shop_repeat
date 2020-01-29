@@ -33,8 +33,9 @@ shelter_4 = Shelter.create!(name: "Smart Friends League", address: "456 Sample S
 # Shelter.create(name: 'Cobre Dog Haven', address: '20 Burton Avenue', city: 'Worcester', state: 'Massachusetts', zip: 41610)
 # Shelter.create(name: 'Conchas Dam Dog Shelter', address: '81 East Amana Lane', city: 'Mission Viejo', state: 'California', zip: 92692)
 
-#shelter_3 pets 
-# athena = shelter_2.create!(name: "Athena", approximate_age: 1, sex: "female", description: "butthead")
+#shelter_1 pets 
+sparky = shelter_1.pets.create!(name: 'Sparky', image: 'https://adopt-dont-shop.s3-us-west-1.amazonaws.com/images/west_highland_white_terrier_24.jpg', approximate_age: 5, sex: 'male')
+peppo  = shelter_1.pets.create!(name: 'Peppo', image: 'https://adopt-dont-shop.s3-us-west-1.amazonaws.com/images/mexican_hairless_105.jpg', approximate_age: 13, sex: 'female')
 
 # #shelter_4 pets 
 # odell = shelter_2.create!(name: "Odell", approximate_age: 4, sex: "male", description: "good dog")

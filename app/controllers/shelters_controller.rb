@@ -1,4 +1,5 @@
 class SheltersController < ApplicationController
+  #refractor: add before each action where applicable 
   def index
     @shelters = Shelter.all 
   end
@@ -35,9 +36,6 @@ class SheltersController < ApplicationController
 
     redirect_to shelters_path
   end
-  
-  
-  
 
   private
     def shelter_params
