@@ -1,5 +1,8 @@
 <h1>All Pets<h1>
- <% @Pets.each do |pet|  %>
+ <% @pets.each do |pet|  %>
     <p><%=  pet.name  %><p> 
+    <p><%=  pet.image  %><p> 
+    <p><%=  pet.approximate_age  %><p> 
+    <p><%=  pet.sex  %><p> 
  <% end %>
  <%= link_to  "Create New pet", new_pet_path %>
