@@ -9,7 +9,7 @@ RSpec.describe 'As a visitor' do
 
     end
 
-    describe "When I visit '/pets/:id" do
+    describe "When I visit '/pets/:id'" do
         it "Then I see the pet with that pet's attributes" do  
     
             visit pet_path(@sparky)
@@ -23,7 +23,8 @@ RSpec.describe 'As a visitor' do
             expect(page).to_not have_content(@peppo.name) 
         end
     end
-    describe "When I visit '/pets/:id" do
+    
+    describe "When I visit '/pets/:id'" do
         it "I see the adoption status" do
             visit pet_path(@sparky)
 
