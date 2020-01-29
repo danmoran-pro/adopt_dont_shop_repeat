@@ -1,6 +1,6 @@
 class PetsController < ApplicationController 
 
     def index
-        @Pets = Pet.all
+        @pets = Pet.all
     end
 end 
