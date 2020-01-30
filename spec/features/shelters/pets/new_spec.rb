@@ -8,24 +8,25 @@ RSpec.describe 'As a visitor' do
             visit shelter_pets_path(shelter_1)
 
             click_link "Create Pet"
-            # expect(current_path).to eq(new_pet_path)
 
-            # image = 
-            # name = 
-            # approximate_age = 
-            # sex = 
+            # expect(current_path).to eq(new_shelter_pet_path)
+            expect(current_path).to eq("/shelters/#{shelter_1.id}/pets/new")
 
+            image = 'https://adopt-dont-shop.s3-us-west-1.amazonaws.com/images/rottweiler_7.jpg'
+            name  = 'Tank'
+            approximate_age = 5
+            sex = 'Male'
 
-            # fill_in 'Image', with: image 
-            # fill_in 'Name',	with: name 
-            # fill_in "Spproximate Age",	with: approximate_age
-            # fill_in "Sex",	with: sex
+            fill_in 'pet[image]', with: image 
+            fill_in 'pet[name]', with: name 
+            fill_in 'pet[approximate_age]',	with: approximate_age
+            fill_in 'pet[sex]',	with: sex
 
-            # click_on "Create Shelter"
+            click_on "Create Pet"
             
-            # expect(current_path).to eq(shelters_path)
+            expect(current_path).to eq(shelter_pets_path(shelter_1))
             
-            # expect(page).to have_content(name)
+            expect(page).to have_content(name)
         end
     end
 end
