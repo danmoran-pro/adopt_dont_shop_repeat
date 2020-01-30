@@ -11,11 +11,11 @@ RSpec.describe "As a visitor" do
         peter  = shelter_2.pets.create!(name: "Peter", image: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13002248/GettyImages-187066830.jpg", approximate_age: 3, sex: "Male")
         
 
-        visit shelter_pets_path(shelter_1.id)
+        visit "/shelters/#{shelter_1.id}/pets"
 
         expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
-
-          #expect(page).to have_content("#{shelter_1.name}'s Pets") 
+        
+        expect(page).to have_content("#{shelter_1.name}'s Pets") 
 
         expect(page).to have_content(sparky.name) 
         expect(page).to have_content(sparky.name)

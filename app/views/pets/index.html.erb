@@ -1,4 +1,8 @@
-<h1>All Pets<h1>
+<% if @shelter %>
+      <h1><%= "#{@shelter.name}'s Pets" %><h1>
+   <% else %>
+      <h1>All Pets<h1>
+<% end %>
  <% @pets.each do |pet|  %>
     <p><%=  pet.name  %><p> 
     <%= image_tag(pet.image) %>
@@ -6,3 +10,7 @@
     <p><%=  pet.sex  %><p> 
     <p><%=  pet.shelter.name  %><p> 
  <% end %>
+<% if @shelter %>
+      <%= link_to  "Create Pet", new_shelter_pet_path %>
+<% end %>
+ 
