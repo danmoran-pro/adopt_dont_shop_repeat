@@ -18,7 +18,7 @@ RSpec.describe 'As a visitor' do
             expect(page).to have_css("img[src *= '#{@sparky.image}']")
             expect(page).to have_content(@sparky.approximate_age)
             expect(page).to have_content(@sparky.sex)
-            expect(page).to have_content(@sparky.shelter.name)
+            expect(page).to have_link(@sparky.shelter.name)
 
             expect(page).to_not have_content(@peppo.name) 
         end

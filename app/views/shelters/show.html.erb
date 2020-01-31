@@ -1,4 +1,4 @@
-<h1><%=@shelter.name %></h1>
+<h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %></h1>
 Address:<%= @shelter.address %></br>
 City:<%= @shelter.city %></br>
 State:<%= @shelter.state %></br>
