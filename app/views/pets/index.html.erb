@@ -6,7 +6,7 @@
  <% @pets.each do |pet|  %>
   <section class="grid-container" id= 'pet-<%=pet.id%>'>
     <%= image_tag(pet.image) %>
-    <p>Name: <%=  pet.name  %><p> 
+    <p>Name: <%= link_to  pet.name, "/pets/#{pet.id}" %><p> 
     <p>Approximate Age: <%=  pet.approximate_age  %><p> 
     <p>Sex: <%=  pet.sex  %><p> 
     <p>Shelter: <%=  pet.shelter.name  %><p>
