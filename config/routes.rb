@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     resources :pets, only: [:new, :index, :create]
   end 
 
-  resources :pets, only: [:index, :show]
+  resources :pets, except: [:new, :create]
 
 end

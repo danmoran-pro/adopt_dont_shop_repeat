@@ -9,8 +9,7 @@ RSpec.describe 'As a visitor' do
 
             click_link "Create Pet"
 
-            # expect(current_path).to eq(new_shelter_pet_path)
-            expect(current_path).to eq("/shelters/#{shelter_1.id}/pets/new")
+            expect(current_path).to eq(new_shelter_pet_path(shelter_1))
 
             image = 'https://adopt-dont-shop.s3-us-west-1.amazonaws.com/images/rottweiler_7.jpg'
             name  = 'Tank'

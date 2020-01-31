@@ -14,7 +14,7 @@ class SheltersController < ApplicationController
 
   def create
     @shelter = Shelter.create(shelter_params)
-    @shelter.save
+    
     redirect_to shelters_path
   end 
 
@@ -25,14 +25,12 @@ class SheltersController < ApplicationController
   def update
     @shelter = Shelter.find(params[:id])
     @shelter.update_attributes(shelter_params)
-    @shelter.save
 
     redirect_to shelter_path
   end
 
   def destroy
-    @shelter = Shelter.find(params[:id])
-    @shelter.destroy
+    @shelter = Shelter.destroy(params[:id])
 
     redirect_to shelters_path
   end
