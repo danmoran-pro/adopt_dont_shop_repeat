@@ -33,5 +33,14 @@ RSpec.describe 'As a visitor' do
             expect(@sparky.adoptable).to eq(true)  
             expect(@peppo.adoptable).to eq(false)  
         end 
+
+        it "I click on the name a pet anywhere on the site, then that link takes me to that Pet's show page" do
+        
+            visit pet_path(@sparky)
+
+            click_link(@sparky.name)
+
+            expect(current_path).to eq(pet_path(@sparky.id))
+        end
     end
 end
