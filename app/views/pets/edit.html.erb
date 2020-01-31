@@ -1,4 +1,5 @@
-<%= form_for [@shelter, @pet] do |f| %>
+<%= form_for @pet do |f| %>
+
   <%= f.label :image %>
   <%= f.text_field :image %><br>
 
@@ -12,4 +13,4 @@
   <%= f.number_field :sex %><br>
   
   <%= f.submit %><br>
-<% end %>
+  <% end %>
