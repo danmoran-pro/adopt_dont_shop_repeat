@@ -7,7 +7,7 @@ RSpec.describe 'As a visitor' do
 
             visit shelter_path(shelter_1)
 
-            expect(page).to have_content(shelter_1.name)
+            expect(page).to have_link(shelter_1.name)
             expect(page).to have_content(shelter_1.address)
             expect(page).to have_content(shelter_1.city)
             expect(page).to have_content(shelter_1.state)

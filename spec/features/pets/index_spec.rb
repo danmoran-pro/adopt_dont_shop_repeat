@@ -31,7 +31,7 @@ RSpec.describe "As a visitor" do
        end 
 
       expect(current_path).to eq(pet_path(@sparky.id))
-  end
+     end
   end
 end
 
