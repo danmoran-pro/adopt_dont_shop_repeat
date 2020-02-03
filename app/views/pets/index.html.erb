@@ -1,20 +1,21 @@
+<div class="grid">
 <% if @shelter %>
-      <h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %>'s Pets<h1>
+      <br><br><h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %>'s Pets<h1>
    <% else %>
-      <h1>All Pets<h1>
+      <br><br><h1>All Pets<h1>
 <% end %>
  <% @pets.each do |pet|  %>
-  <section class="grid-container" id= 'pet-<%=pet.id%>'>
+  <div class="grid-container" id= 'pet-<%=pet.id%>'>
     <%= image_tag(pet.image) %>
-    <p>Name: <%= link_to  pet.name, "/pets/#{pet.id}" %><p> 
-    <p>Approximate Age: <%=  pet.approximate_age  %><p> 
-    <p>Sex: <%=  pet.sex  %><p> 
-    <p>Shelter: <%= link_to pet.shelter.name, "/shelters/#{pet.shelter.id}" %><p>
+    <h4>Name: <%= link_to  pet.name, "/pets/#{pet.id}" %><h4> 
+    <h6>Approximate Age: <%=  pet.approximate_age  %><h6> 
+    <h6>Sex: <%=  pet.sex  %><h6> 
+    <h6>Shelter: <%= link_to pet.shelter.name, "/shelters/#{pet.shelter.id}" %><h6>
     <%= link_to  "Update Pet", "/pets/#{pet.id}/edit" %>
     <%= link_to  "Delete Pet", "/pets/#{pet.id}", method: :delete %> 
-   </section>
+   </div>
  <% end %>
 <% if @shelter %>
       <%= link_to  "Create Pet", new_shelter_pet_path %>
 <% end %>
- 
+ </div>
